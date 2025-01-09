@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <div>
+    <button id="cta">Click Me</button>
+  </div>
+
+  <body>
+    <script src="../../index.js"></script>
+    <script>
+      const prove = new Prove({
+        requestId: "PRVT9D9A9ZORP",
+        onLoad: addCtaEvent,
+        onEvent: console.log,
+        onSuccess: console.log,
+      });
+
+      prove.setup(); // you can also pass the callbacks and requestId here
+
+      function addCtaEvent() {
+        document.querySelector("#cta").addEventListener("click", () => {
+          prove.open();
+        });
+      }
+    </script>
+  </body>
+</html>
