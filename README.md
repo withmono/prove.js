@@ -1,5 +1,5 @@
 
-# Mono Connect.js
+# Mono Prove.js
 
 Mono Prove.js is a quick and secure way to verify identity from within your app. Mono Prove is a drop-in framework that handles identity verification of costumers using your app (personal information, documents, and bank accounts, etc). It works with all major javascript frameworks.
 
