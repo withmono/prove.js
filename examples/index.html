@@ -7,7 +7,7 @@
   </head>
 
   <div>
-    <button id="cta">Click Me</button>
+    <button id="cta" onclick="prove.open()">Click Me</button>
   </div>
 
   <body>
@@ -15,18 +15,13 @@
     <script>
       const prove = new Prove({
         requestId: "PRVT9D9A9ZORP",
-        onLoad: addCtaEvent,
+        onLoad: () => console.log("LOADED"),
         onEvent: console.log,
         onSuccess: console.log,
       });
 
       prove.setup(); // you can also pass the callbacks and requestId here
 
-      function addCtaEvent() {
-        document.querySelector("#cta").addEventListener("click", () => {
-          prove.open();
-        });
-      }
     </script>
   </body>
 </html>
