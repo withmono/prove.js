@@ -187,9 +187,9 @@ If you're having general trouble with Mono Prove.js or your Mono integration, pl
 
 If you find any issue using this package please let us know by filing an issue right [here](https://github.com/withmono/prove.js/issues).
 
-If you would like to contribute to the Mono Connect.js, please make sure to read our [contributor guidelines](https://github.com/withmono/prove.js/tree/develop/CONTRIBUTING.md).
+If you would like to contribute to the Mono Connect.js, please make sure to read our [contributor guidelines](https://github.com/withmono/prove.js/blob/master/CONTRIBUTING.md).
 
 
 ## License
 
-[MIT](https://github.com/withmono/connect.js/tree/develop/LICENSE) for more information.
+[MIT](https://github.com/withmono/prove.js/tree/develop/LICENSE) for more information.
