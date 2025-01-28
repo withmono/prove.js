@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Mono Prove Library",
   "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
   "author": "Mono (https://mono.co/)",
   "publishConfig": {
     "access": "public"
@@ -13,9 +16,7 @@
     "identity verification",
     "widget"
   ],
-  "scripts": {
-    "build": "webpack"
-  },
+
   "dependencies": {
     "json-loader": "^0.5.7",
     "webpack": "^5.97.1"

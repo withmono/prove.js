@@ -6,12 +6,12 @@ module.exports = {
   entry: {
     index: [
       path.resolve(__dirname, "utils.js"),
-      path.resolve(__dirname, "prove.js"),
+      path.resolve(__dirname, "index.js"),
     ],
   },
 
   output: {
-    filename: "[name].js",
+    filename: "dist/index.js",
     path: path.resolve(__dirname),
     library: "@mono.co/prove.js",
     libraryTarget: "umd",
