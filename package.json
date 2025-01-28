@@ -7,6 +7,12 @@
   "publishConfig": {
     "access": "public"
   },
+  "keywords": [
+    "mono",
+    "prove",
+    "identity verification",
+    "widget"
+  ],
   "scripts": {
     "build": "webpack"
   },
