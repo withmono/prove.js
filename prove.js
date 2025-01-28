@@ -73,3 +73,6 @@ class Prove {
 }
 
 if (typeof window !== "undefined") window.Prove = Prove;
+
+module.exports = Prove;
+
