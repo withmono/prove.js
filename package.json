@@ -18,7 +18,7 @@
   ],
   "dependencies": {
     "json-loader": "^0.5.7",
-    "terser-webpack-plugin": "^4.2.3",
+    "terser-webpack-plugin": "^5.3.11",
     "webpack": "^5.97.1"
   },
   "devDependencies": {
