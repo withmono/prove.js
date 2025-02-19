@@ -13,7 +13,7 @@ var utils = () => {
 
     const { requestId, qs, onLoad } = config;
     const encodedKeys = ["data", "selectedInstitution"]; // add keys for nested objects to be encoded
-    var source = new URL(`https://develop.d121npziv08191.amplifyapp.com/` + requestId);
+    var source = new URL(`https://prove.mono.co/` + requestId);
     
     source.searchParams.set("referrer", window.location.href);
     source.searchParams.set("version", "2025-01-01");
