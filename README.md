@@ -181,7 +181,7 @@ The data object returned from the onEvent callback.
 
 
 ## Support
-If you're having general trouble with Mono Prove.js or your Mono integration, please reach out to us at <hi@mono.co> or come chat with us on Slack. We're proud of our level of service, and we're more than happy to help you out with your integration to Mono.
+If you're having general trouble with Mono Prove.js or your Mono integration, please reach out to us at <support@mono.co> or come chat with us on Slack. We're proud of our level of service, and we're more than happy to help you out with your integration to Mono.
 
 ## Contributing
 
@@ -192,4 +192,4 @@ If you would like to contribute to the Mono Connect.js, please make sure to read
 
 ## License
 
-[MIT](https://github.com/withmono/prove.js/tree/develop/LICENSE) for more information.
+[MIT](https://github.com/withmono/prove.js/tree/main/LICENSE) for more information.
