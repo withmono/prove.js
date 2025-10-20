@@ -165,9 +165,12 @@ const prove = new Prove({
 
 Event names corespond to the `type` key returned by the raw event data. Possible options are in the table below.
 
-| Event Name | Description |
-| ----------- | ----------- |
-
+| Event Name      | Description                                                  |
+| --------------- | ------------------------------------------------------------ |
+| opened          | Triggered when the user opens the Prove widget.              |
+| closed          | Triggered when the user closes the Prove widget.             |
+| identityVerified| Triggered when the user successfully verifies their identity.|
+| error           | Triggered when the widget reports an error.                  |
 
 
 #### <a name="dataObject"></a> `data`
@@ -175,7 +178,13 @@ The data object returned from the onEvent callback.
 
 ```js
 {
-
+  eventType: String, // Type of event
+  reference: String, // reference passed through the prove config
+  pageName: String, // name of page the widget exited on
+  errorType: String, // error thrown by widget
+  errorMessage: String, // error message describing the error
+  reason: String, // reason for exiting the widget
+  timestamp: Number // unix timestamp of the event as a number
 }
 ```
 
