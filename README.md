@@ -169,6 +169,7 @@ Event names corespond to the `type` key returned by the raw event data. Possible
 | --------------- | ------------------------------------------------------------ |
 | opened          | Triggered when the user opens the Prove widget.              |
 | closed          | Triggered when the user closes the Prove widget.             |
+| loaded          | Triggered when the prove widget is loaded.                   |
 | identityVerified| Triggered when the user successfully verifies their identity.|
 | error           | Triggered when the widget reports an error.                  |
 
@@ -178,13 +179,13 @@ The data object returned from the onEvent callback.
 
 ```js
 {
-  eventType: String, // Type of event
-  reference: String, // reference passed through the prove config
-  pageName: String, // name of page the widget exited on
-  errorType: String, // error thrown by widget
-  errorMessage: String, // error message describing the error
-  reason: String, // reason for exiting the widget
-  timestamp: Number // unix timestamp of the event as a number
+  eventType: string, // type of event mono.prove.xxxx
+  reference: string, // reference passed through the prove config
+  pageName: string, // name of page the widget exited on
+  errorType: string, // error thrown by widget
+  errorMessage: string, // error message describing the error
+  reason: string, // reason for exiting the widget
+  timestamp: number // unix timestamp of the event
 }
 ```
 
