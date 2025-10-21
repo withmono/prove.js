@@ -168,8 +168,8 @@ Event names corespond to the `type` key returned by the raw event data. Possible
 | Event Name      | Description                                                  |
 | --------------- | ------------------------------------------------------------ |
 | opened          | Triggered when the user opens the Prove widget.              |
-| closed          | Triggered when the user closes the Prove widget.             |
 | loaded          | Triggered when the prove widget is loaded.                   |
+| closed          | Triggered when the user closes the Prove widget.             |
 | identityVerified| Triggered when the user successfully verifies their identity.|
 | error           | Triggered when the widget reports an error.                  |
 
@@ -197,7 +197,7 @@ If you're having general trouble with Mono Prove.js or your Mono integration, pl
 
 If you find any issue using this package please let us know by filing an issue right [here](https://github.com/withmono/prove.js/issues).
 
-If you would like to contribute to the Mono prove.js, please make sure to read our [contributor guidelines](https://github.com/withmono/prove.js/blob/master/CONTRIBUTING.md).
+If you would like to contribute to the Mono Prove.js, please make sure to read our [contributor guidelines](https://github.com/withmono/prove.js/blob/master/CONTRIBUTING.md).
 
 
 ## License

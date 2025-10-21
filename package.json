@@ -1,6 +1,6 @@
 {
   "name": "@mono.co/prove.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mono Prove Library",
   "main": "index.js",
   "scripts": {
