@@ -49,7 +49,7 @@ Click the links below for detailed examples on how to use prove.js with your fav
 The requestId is the param ID attached at the end of the link generated after initiating a request using the mono prove initiation API.
 
 ```js
-new Connect({
+new Prove({
   requestId: 'prove_request_id',
 });
 ```
@@ -69,7 +69,7 @@ new Prove({
 ### <a name="onClose"></a> `onClose`
 The optional closure is called when a user has specifically exited the Mono Prove flow (i.e. the widget is not visible to the user). It does not take any arguments.
 ```js
-new Connect({
+new Prove({
   requestId: 'prove_request_id'
   onClose: () => console.log("widget has been closed")
 });
@@ -78,7 +78,7 @@ new Connect({
 ### <a name="onLoad"></a> `onLoad`
 This function is invoked the widget has been mounted unto the DOM. You can handle toggling your trigger button within this callback.
 ```js
-new Connect({
+new Prove({
   requestId: 'prove_request_id',
   onLoad: () => console.log("widget loaded successfully")
 });
@@ -90,7 +90,7 @@ This optional function is called when certain events in the Mono Prove flow
 See the [data](#dataObject) object below for details.
 
 ```js
-new Connect({
+new Prove({
   requestId: 'prove_request_id',
   onEvent: (eventName, data) => {
     console.log(eventName);
@@ -105,7 +105,7 @@ new Connect({
 ### `setup()`
 This method is used to load the widget unto the DOM, the widget remains hidden after invoking this function until the `open()` method is called.
 ```js
-const connect = new Connect({
+const prove = new Prove({
   requestId: 'prove_request_id',
   onSuccess: () => console.log("Identity verified successfully"),
   onLoad: () => console.log("widget loaded successfully"),
@@ -116,34 +116,34 @@ const connect = new Connect({
   },
 });
 
-connect.setup();
+prove.setup();
 ```
 
 ### `open()`
 This method makes the widget visible to the user.
 ```js
-const connect = new Connect({
+const prove = new Prove({
   requestId: 'prove_request_id',
   onSuccess: () => console.log("Identity verified successfully"),
 });
 
-connect.setup();
-connect.open();
+prove.setup();
+prove.open();
 ```
 
 ### `close()`
 This method programatically hides the widget after it's been opened.
 ```js
-const connect = new Connect({
+const prove = new Prove({
   requestId: 'prove_request_id',
   onSuccess: () => console.log("Identity verified successfully"),
 });
 
-connect.setup();
-connect.open();
+prove.setup();
+prove.open();
 
 // this closes the widget 5seconds after it has been opened
-setTimeout(() => connect.close(), 5000)
+setTimeout(() => prove.close(), 5000)
 ```
 
 ### <a name="onEventCallback"></a> onEvent Callback
@@ -151,7 +151,7 @@ setTimeout(() => connect.close(), 5000)
 The onEvent callback returns two paramters, [eventName](#eventName) a string containing the event name and [data](#dataObject) an object that contains event metadata.
 
 ```js
-const connect = new Connect({
+const prove = new Prove({
   requestId: 'prove_request_id'
   onSuccess: ({code}) => console.log("code", code),
   onEvent: (eventName, data) => {
@@ -165,9 +165,13 @@ const connect = new Connect({
 
 Event names corespond to the `type` key returned by the raw event data. Possible options are in the table below.
 
-| Event Name | Description |
-| ----------- | ----------- |
-
+| Event Name      | Description                                                  |
+| --------------- | ------------------------------------------------------------ |
+| opened          | Triggered when the user opens the Prove widget.              |
+| loaded          | Triggered when the prove widget is loaded.                   |
+| closed          | Triggered when the user closes the Prove widget.             |
+| identityVerified| Triggered when the user successfully verifies their identity.|
+| error           | Triggered when the widget reports an error.                  |
 
 
 #### <a name="dataObject"></a> `data`
@@ -175,7 +179,13 @@ The data object returned from the onEvent callback.
 
 ```js
 {
-
+  eventType: string, // type of event mono.prove.xxxx
+  reference: string, // reference passed through the prove config
+  pageName: string, // name of page the widget exited on
+  errorType: string, // error thrown by widget
+  errorMessage: string, // error message describing the error
+  reason: string, // reason for exiting the widget
+  timestamp: number // unix timestamp of the event
 }
 ```
 
@@ -187,7 +197,7 @@ If you're having general trouble with Mono Prove.js or your Mono integration, pl
 
 If you find any issue using this package please let us know by filing an issue right [here](https://github.com/withmono/prove.js/issues).
 
-If you would like to contribute to the Mono Connect.js, please make sure to read our [contributor guidelines](https://github.com/withmono/prove.js/blob/master/CONTRIBUTING.md).
+If you would like to contribute to the Mono Prove.js, please make sure to read our [contributor guidelines](https://github.com/withmono/prove.js/blob/master/CONTRIBUTING.md).
 
 
 ## License
